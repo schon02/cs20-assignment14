@@ -5,8 +5,11 @@ var http = require('http');
 var fs = require('fs');
 var querystring = require('querystring');
 // var port = process.env.PORT || 3000;
-const port = 8080;
+// var port = 8080;
+const port = 8080; 
 
+
+// app.listen(port, () => {
 http.createServer(function(req, res)
 {
     if(req.url == "/") {
@@ -63,3 +66,4 @@ http.createServer(function(req, res)
         res.end();
     }
 }).listen(port);
+// });
