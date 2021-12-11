@@ -4,7 +4,8 @@ const url = "mongodb+srv://schon02:UKdSmzueq45edrFR@cluster0.kaagh.mongodb.net/b
 var http = require('http');
 var fs = require('fs');
 var querystring = require('querystring');
-var port = process.env.PORT || 3000;
+// var port = process.env.PORT || 3000;
+const port = 8080;
 
 http.createServer(function(req, res)
 {
@@ -16,7 +17,7 @@ http.createServer(function(req, res)
         res.end();
         });
     }
-    else if(req.url == "/process")
+    else if(req.url == "/part2")
     {
         res.writeHead(200, {'Content-Type': 'text/html'});
         res.write("<h2> PROCESSING FORM </h2>");
